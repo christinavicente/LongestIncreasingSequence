@@ -75,17 +75,17 @@ public class SequenceFinder {
                 }
             }
             //checks to see if the current value can be added, then adds it
-            if(possible[max]) {
-                result.add(values.get(max));
-            }
+            result.add(values.get(max));
             //removes the current value from being added again
             possible[max]=false;
             //removes values that cannot be added anymore
             possible= realignPossible(values.get(max),max);
             //checks to see if all values can no longer be added
             allDone=checkCompletion(possible);
-            //increments the index to the next index
-            max++;
+            //increments the index to the available next index
+            while((max<possible.length)&&(!possible[max])) {
+                max++;
+            }
         }
         return result;
     }
