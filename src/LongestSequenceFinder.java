@@ -49,7 +49,7 @@ public class LongestSequenceFinder {
         }
         return values;
     }
-    //the print statement fro the example from class
+    //the print statement for the example from class
     public static void printLiveLessonExample(Integer[] result){
         System.out.println("Winning sequence is");
         for (Integer i : result) {
